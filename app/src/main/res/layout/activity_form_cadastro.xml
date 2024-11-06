@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/offwhite"
+        tools:context=".FormCadastro">
+
+        <TextView
+            android:id="@+id/cadastro_title"
+            style="@style/Textos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastro_title"
+            app:layout_constraintBottom_toTopOf="@id/nome_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nome_title"
+            style="@style/Textos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_title"
+            app:layout_constraintBottom_toTopOf="@id/nome_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cadastro_title" />
+
+        <EditText
+            android:id="@+id/nome_edit"
+            style="@style/Textos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name_hint"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@id/data_nasc_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_title" />
+
+        <TextView
+            android:id="@+id/telefone_title"
+            style="@style/Textos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/telefone_title"
+            app:layout_constraintBottom_toTopOf="@id/telefone_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_edit" />
+
+        <TextView
+            android:id="@+id/data_nasc_title"
+            style="@style/Textos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_nascimento_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_edit" />
+
+        <EditText
+            android:id="@+id/telefone_edit"
+            style="@style/Textos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/telefone_hint"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/telefone_title" />
+
+        <EditText
+            android:id="@+id/data_nasc_edit"
+            style="@style/Textos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/data_nascimento_hint"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/telefone_edit"
+            app:layout_constraintTop_toBottomOf="@id/data_nasc_title" />
+
+        <TextView
+            android:id="@+id/email_title"
+            style="@style/Textos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email_title"
+            app:layout_constraintBottom_toTopOf="@id/email_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/data_nasc_edit" />
+
+        <EditText
+            android:id="@+id/email_edit"
+            style="@style/Textos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@id/senha_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_title" />
+
+        <TextView
+            android:id="@+id/senha_title"
+            style="@style/Textos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/senha_title"
+            app:layout_constraintBottom_toTopOf="@id/senha_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_edit" />
+
+        <EditText
+            android:id="@+id/senha_edit"
+            style="@style/Textos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/senha_hint"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@id/confirma_senha_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/senha_title" />
+
+        <TextView
+            android:id="@+id/confirma_senha_title"
+            style="@style/Textos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/senha_confirmacao"
+            app:layout_constraintBottom_toTopOf="@id/confirma_senha_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/senha_edit" />
+
+        <EditText
+            android:id="@+id/confirma_senha_edit"
+            style="@style/Textos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/senha_hint"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@id/confirma_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirma_senha_title" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirma_button"
+            style="@style/Buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmar"
+            app:layout_constraintBottom_toBottomOf="@id/texto_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirma_senha_edit" />
+
+        <TextView
+            android:id="@+id/texto_login"
+            style="@style/Textos"
+            android:layout_width="wrap_content"
+            android:text="@string/login_text"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirma_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
